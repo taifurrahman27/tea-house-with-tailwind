@@ -9,32 +9,129 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         *{
               font-family: "Manrope", sans-serif;
+              max-width: 1600px;
         }
+
+        /* added: smooth anchor scrolling and full-width wrappers */
+        html { scroll-behavior: smooth; }
+        body, header, section, footer, nav { max-width: none; }
     </style>
 
 </head>
 
-<body>
-    <header>
-        <div>
-            <h1 class="bg-sky-500 text-2xl color-red-500">
-                It's good
-                tea time at The Tea House
-            </h1>
-            <p>
-                Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.
-            </p>
-            <button>
-                Explore More
-            </button>
-        </div>
-        <div>
+<body class="bg-[#FAF8F2] text-[#1C1C1C]">
 
+    <!-- added: navigation bar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm">
+        <div class="mx-auto flex items-center justify-between px-6 py-4 max-w-7xl">
+            <a href="#home" class="text-2xl font-extrabold text-green-700">
+                <i class="fa-solid fa-mug-hot"></i> The Tea House
+            </a>
+            <ul class="hidden md:flex gap-8 font-semibold">
+                <li><a href="#home" class="hover:text-green-600">Home</a></li>
+                <li><a href="#products" class="hover:text-green-600">Products</a></li>
+                <li><a href="#about" class="hover:text-green-600">About</a></li>
+                <li><a href="#contact" class="hover:text-green-600">Contact</a></li>
+            </ul>
+            <a href="#contact" class="rounded-full bg-green-600 px-5 py-2 text-white font-semibold hover:bg-green-700">Order Now</a>
+        </div>
+    </nav>
+
+    <header class="m" id="home">
+        <div class="bg-green-400">
+            <div class="mx-auto grid items-center gap-8 px-6 py-16 max-w-7xl md:grid-cols-2">
+                <div>
+                    <h1 class="text-5xl p-4 text-[#1C1C1C] font-bold ">
+                        It's good tea time at The Tea House
+                    </h1>
+                    <p class="px-4 text-lg">
+                        Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.
+                    </p>
+                    <button class="m-4 rounded-full bg-[#1C1C1C] px-6 py-3 font-semibold text-white hover:bg-green-800 transition">
+                        Explore More
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div>
+                    <!-- added: hero image inside the original empty div -->
+                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=900&q=80"
+                         alt="A cup of freshly brewed tea"
+                         class="w-full rounded-3xl shadow-xl object-cover">
+                </div>
+            </div>
         </div>
     </header>
+
+    <!-- added: products -->
+    <main>
+        <section id="products" class="mx-auto px-6 py-20 max-w-7xl">
+            <h2 class="text-center text-4xl font-bold">Our Signature Teas</h2>
+            <p class="mx-auto mt-3 text-center text-gray-600 max-w-2xl">
+                Hand-picked leaves, carefully blended for a smooth and satisfying cup.
+            </p>
+
+            <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <article class="rounded-2xl bg-white p-6 shadow hover:shadow-lg transition">
+                    <i class="fa-solid fa-leaf text-3xl text-green-600"></i>
+                    <h3 class="mt-4 text-xl font-bold">Green Tea</h3>
+                    <p class="mt-2 text-gray-600">Light, fresh and rich in antioxidants.</p>
+                    <p class="mt-4 font-bold text-green-700">$8.00</p>
+                </article>
+                <article class="rounded-2xl bg-white p-6 shadow hover:shadow-lg transition">
+                    <i class="fa-solid fa-mug-saucer text-3xl text-green-600"></i>
+                    <h3 class="mt-4 text-xl font-bold">Black Tea</h3>
+                    <p class="mt-2 text-gray-600">Bold, robust and perfect with milk.</p>
+                    <p class="mt-4 font-bold text-green-700">$7.00</p>
+                </article>
+                <article class="rounded-2xl bg-white p-6 shadow hover:shadow-lg transition">
+                    <i class="fa-solid fa-seedling text-3xl text-green-600"></i>
+                    <h3 class="mt-4 text-xl font-bold">Herbal Blend</h3>
+                    <p class="mt-2 text-gray-600">Soothing botanicals for a calm evening.</p>
+                    <p class="mt-4 font-bold text-green-700">$9.00</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- added: about -->
+        <section id="about" class="bg-white">
+            <div class="mx-auto grid items-center gap-10 px-6 py-20 max-w-7xl md:grid-cols-2">
+                <img src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=900&q=80"
+                     alt="Tea plantation" class="w-full rounded-3xl object-cover shadow">
+                <div>
+                    <h2 class="text-4xl font-bold">Why The Tea House?</h2>
+                    <p class="mt-4 text-gray-600">
+                        We source directly from trusted gardens, so every cup stays fresh,
+                        flavorful and ethically produced.
+                    </p>
+                    <ul class="mt-6 space-y-3 font-semibold">
+                        <li><i class="fa-solid fa-circle-check text-green-600"></i> 100% natural ingredients</li>
+                        <li><i class="fa-solid fa-circle-check text-green-600"></i> Fast and reliable delivery</li>
+                        <li><i class="fa-solid fa-circle-check text-green-600"></i> Bulk and retail supply</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- added: footer / contact -->
+    <footer id="contact" class="bg-[#1C1C1C] text-white">
+        <div class="mx-auto flex flex-col items-center justify-between gap-4 px-6 py-10 max-w-7xl md:flex-row">
+            <p class="font-bold text-lg"><i class="fa-solid fa-mug-hot text-green-400"></i> The Tea House</p>
+            <p class="text-gray-400">hello@theteahouse.com</p>
+            <div class="flex gap-4 text-xl">
+                <a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-green-400"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+        <p class="pb-6 text-center text-sm text-gray-500">&copy; 2026 The Tea House. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
